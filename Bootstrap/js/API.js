@@ -30,6 +30,7 @@ export async function receberRespostaAPI(prop) {
 
     try {
 
+        // verifica qual é o input que foi usado, pois a URL da API muda
         if (document.querySelector('.inputs').classList.contains('input_extensao') === true) {
             const respostaAPI = await hearthstoneAPIExtensao(prop);
             cardsAPI = await respostaAPI.json();

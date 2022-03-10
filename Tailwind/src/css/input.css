@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #fdab00;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #1de2fd;
+    border-radius: 2rem;
+}
+
+body {
+    background-color: #c58e53;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+section #div_botao {
+    width: 100%;
+    height: 100%;
+}
+
+section #div_loading {
+    width: 100%;
+    height: 100%;
+}
+
+section #div_loading #loading {
+    width: 120px;
+} 
+
+section .grid {
+    width: 90%;
+    place-items: center;
+}
+
+section .grid div {
+    width: 400px;
+}
+
+section .grid div .div_imagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section .grid div .div_imagem img {
+    width: 300px;
+}
+
+section .grid div .div_informacoes {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+
+    section #div_loading #loading {
+        width: 80px;
+    }
+
+    section .grid div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section .grid div .div_imagem img {
+        width: 250px;
+    }
+
+    section .grid div .div_informacoes {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section .grid div .div_informacoes p {
+        font-size: 15px;
+    }
+} 
+
+@media screen and (max-width: 400px) {
+
+    section {
+        position: fixed;
+    }
+
+    section .grid div .div_imagem img {
+        width: 200px;
+    }
+
+    section .grid div .div_informacoes p {
+        font-size: 12px;
+    }
+}

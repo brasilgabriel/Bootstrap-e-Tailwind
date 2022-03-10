@@ -1,10 +1,8 @@
 import { mostrarCartas } from './DOM.js';
 
-export let cartas = [];
 let conteudoCartas = [];
 
-export function limpandoArray() {
-    cartas = [];
+function limpandoArray() {
     conteudoCartas = [];
 }
 
@@ -31,8 +29,6 @@ export function atribuirValores(cardsAPI) {
             atributoAtaque: carta.attack !== undefined ? `<p><b>Atributo de Ataque:</b> ${carta.attack}</p>` : '',
             atributoVida: carta.health !== undefined ? `<p><b>Atributo de Vida:</b> ${carta.health}</p>` : '',
             tipo: carta.type !== undefined ? `<p><b>Tipo:</b> ${carta.type}</p>` : '',
-            historia: carta.flavor !== undefined ? `<p><b>História da carta:</b> ${carta.flavor}</p>` : '',
-            artista: carta.artist !== undefined ? `<p><b>Artista:</b> ${carta.artist}</p>` : ''
         };
 
         conteudoCartas.push(objCard);
